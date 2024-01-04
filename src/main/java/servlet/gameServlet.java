@@ -17,7 +17,7 @@ public class gameServlet extends HttpServlet {
 
     private incrementGames incrementGames = new incrementGames();
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String answer = gameService.call(request.getParameter("choice"));
         HttpSession session = request.getSession();
 
