@@ -1,5 +1,3 @@
-<%@ page import="java.net.InetAddress" %>
-<%@ page import="static java.net.InetAddress.getLocalHost" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -13,13 +11,7 @@
     </form>
 </div>
 <div style="text-align: right">
-    <form>
-        <p>Кількість зіграних ігор: (<%
-                ipAdress : session.setAttribute("ipAdress", request.getLocalAddr());
-
-
-        %>>)</p>
-    </form>
+        Статистика: ${player}<br>
 </div>
 </body>
 </html>

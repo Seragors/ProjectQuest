@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet("/lose")
+@WebServlet("/")
 public class loseServlet extends HttpServlet {
     private loseService loseService = new loseService();
     protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String answer = loseService.call(request.getParameter("choice"));
-        HttpSession session = request.getSession();
+        request.getSession().invalidate();
 
         response.setStatus(200);
         request.setAttribute("answer", answer);

@@ -15,7 +15,6 @@ public class winServlet extends HttpServlet {
     private winService winService = new winService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String answer = winService.call(request.getParameter("choice"));
-        HttpSession session = request.getSession();
 
         response.setStatus(200);
         request.setAttribute("answer", answer);

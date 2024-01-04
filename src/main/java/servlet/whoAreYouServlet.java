@@ -15,7 +15,6 @@ public class whoAreYouServlet extends HttpServlet {
     private whoAreYouService whoAreYouService = new whoAreYouService();
     protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String answer = whoAreYouService.call(request.getParameter("choice"));
-        HttpSession session = request.getSession();
 
         response.setStatus(200);
         request.setAttribute("answer", answer);

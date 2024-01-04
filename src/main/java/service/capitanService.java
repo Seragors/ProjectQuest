@@ -1,7 +1,6 @@
 package service;
 
 public class capitanService {
-
     public String call(String choice) {
         String accepted  = null;
         if ("accept".equals(choice)) {

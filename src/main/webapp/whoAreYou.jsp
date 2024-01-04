@@ -12,10 +12,5 @@
         <input type="submit" value="Відправити">
     </form>
 </div>
-<div style="text-align: right">
-    <form>
-        <p>Кількість зіграних ігор: ${player}</p>
-    </form>
-</div>
 </body>
 </html>
