@@ -12,7 +12,8 @@ import java.io.IOException;
 @WebServlet("/whoAreYou")
 public class WhoAreYouServlet extends HttpServlet {
     private WhoAreYouService whoAreYouService = new WhoAreYouService();
-    protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String answer = whoAreYouService.call(request.getParameter("choice"));
 
         response.setStatus(200);

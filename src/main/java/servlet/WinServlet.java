@@ -12,6 +12,7 @@ import java.io.IOException;
 @WebServlet("/win")
 public class WinServlet extends HttpServlet {
     private WinService winService = new WinService();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String answer = winService.call(request.getParameter("choice"));
 

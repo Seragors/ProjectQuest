@@ -6,6 +6,7 @@ public class WhoAreYouService {
     private final String acceptIndex = "win.jsp";
     private final String rejectIndex = "lose.jsp";
     private String accepted;
+
     public String call(String choice) {
         if (accept.equals(choice)) {
             accepted = acceptIndex;

@@ -6,6 +6,7 @@ public class GameService {
     private final String acceptIndex = "capitan.jsp";
     private final String rejectIndex = "lose.jsp";
     private String accepted;
+
     public String call(String choice) {
         if (accept.equals(choice)) {
             accepted = acceptIndex;

@@ -13,7 +13,8 @@ import java.io.IOException;
 public class CapitanServlet extends HttpServlet {
 
     private CapitanService capitanService = new CapitanService();
-    protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String answer = capitanService.call(request.getParameter("choice"));
 
         response.setStatus(200);

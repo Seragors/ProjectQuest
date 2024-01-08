@@ -12,7 +12,8 @@ import java.io.IOException;
 @WebServlet("/")
 public class LoseServlet extends HttpServlet {
     private LoseService loseService = new LoseService();
-    protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String answer = loseService.call(request.getParameter("choice"));
         request.getSession().invalidate();
 

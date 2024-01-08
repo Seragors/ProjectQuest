@@ -9,11 +9,13 @@ class GameServiceTest {
     private final String testReject = "lose.jsp";
     private final String accept = "accept";
     private final String reject = "reject";
+
     @Test
     void testAcceptCheck() {
         GameService answer = new GameService();
         assertEquals(testAccept, answer.call(accept));
     }
+
     @Test
     void testRejectCheck() {
         GameService answer = new GameService();
