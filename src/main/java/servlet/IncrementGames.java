@@ -1,12 +1,14 @@
-package service;
+package servlet;
 
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpSession;
 
-public class incrementGames {
+public class IncrementGames extends HttpServlet {
+    private int number = 1;
     public void incrementsGames(HttpSession session) {
         Integer player = (Integer) session.getAttribute("player");
         if (player == null) {
-            player = 1;
+            player = number;
         } else {
             player++;
         }

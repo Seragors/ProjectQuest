@@ -4,7 +4,7 @@
 <body>
 <div style="text-align: center">
     <h1>Ви втрачаєте пам'ять. Прийняти виклик НЛО?</h1>
-    <form action="/game" method="post">
+    <form action="game" method="post">
         <input type="radio" name="choice" value="accept"> Прийняти виклик<br>
         <input type="radio" name="choice" value="reject"> Відхилити виклик<br>
         <input type="submit" value="Відправити">

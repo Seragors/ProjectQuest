@@ -1,23 +1,23 @@
 package servlet;
 
-import service.whoAreYouService;
+import service.LoseService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet("/whoAreYou")
-public class whoAreYouServlet extends HttpServlet {
-    private whoAreYouService whoAreYouService = new whoAreYouService();
+@WebServlet("/")
+public class LoseServlet extends HttpServlet {
+    private LoseService loseService = new LoseService();
     protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String answer = whoAreYouService.call(request.getParameter("choice"));
+        String answer = loseService.call(request.getParameter("choice"));
+        request.getSession().invalidate();
 
         response.setStatus(200);
         request.setAttribute("answer", answer);
-        request.getRequestDispatcher(String.valueOf(answer)).forward(request, response);
+        request.getRequestDispatcher(answer).forward(request, response);
     }
 }
