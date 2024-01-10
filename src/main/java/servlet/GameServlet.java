@@ -12,8 +12,8 @@ import java.io.IOException;
 
 @WebServlet("/game")
 public class GameServlet extends HttpServlet {
+    private int number = 1;
     private GameService gameService = new GameService();
-    private IncrementGames incrementGames = new IncrementGames();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String answer = gameService.call(request.getParameter("choice"));
@@ -22,6 +22,15 @@ public class GameServlet extends HttpServlet {
         response.setStatus(200);
         request.setAttribute("answer", answer);
         request.getRequestDispatcher(answer).forward(request, response);
-        incrementGames.incrementsGames(session);
+        incrementsGames(session);
+    }
+    private void incrementsGames(HttpSession session) {
+        Integer player = (Integer) session.getAttribute("player");
+        if (player == null) {
+            player = number;
+        } else {
+            player++;
+        }
+        session.setAttribute("player", player);
     }
 }

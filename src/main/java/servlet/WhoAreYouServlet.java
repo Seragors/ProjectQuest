@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/whoAreYou")
+@WebServlet("/who-are-you")
 public class WhoAreYouServlet extends HttpServlet {
     private WhoAreYouService whoAreYouService = new WhoAreYouService();
 

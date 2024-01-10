@@ -1,14 +1,15 @@
 package service;
 
+import constant.Constants;
+
 public class WinService {
-    private final String accept = "accept";
     private final String acceptIndex = "index.jsp";
-    private String accepted;
 
     public String call(String choice) {
-        if (accept.equals(choice)) {
-            accepted = acceptIndex;
+        String result = null;
+        if (Constants.accept.equals(choice)) {
+            result = acceptIndex;
         }
-        return accepted;
+        return result;
     }
 }

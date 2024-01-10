@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/")
+@WebServlet("/lose")
 public class LoseServlet extends HttpServlet {
     private LoseService loseService = new LoseService();
 

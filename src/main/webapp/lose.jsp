@@ -6,8 +6,7 @@
 <div style="text-align: center">
     <h1>Поразка.</h1>
     <form action="lose" method="post">
-        <input type="radio" name="choice" value="accept"> Почати знову<br>
-        <input type="submit" value="Відправити">
+        <a href="/">Почати знову</a>
     </form>
 </div>
 </body>

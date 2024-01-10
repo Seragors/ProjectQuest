@@ -1,18 +1,18 @@
 package service;
 
+import constant.Constants;
+
 public class WhoAreYouService {
-    private final String accept = "accept";
-    private final String reject = "reject";
     private final String acceptIndex = "win.jsp";
     private final String rejectIndex = "lose.jsp";
-    private String accepted;
 
     public String call(String choice) {
-        if (accept.equals(choice)) {
-            accepted = acceptIndex;
-        } else if (reject.equals(choice)) {
-            accepted = rejectIndex;
+        String result = null;
+        if (Constants.accept.equals(choice)) {
+            result = acceptIndex;
+        } else if (Constants.reject.equals(choice)) {
+            result = rejectIndex;
         }
-        return accepted;
+        return result;
     }
 }
