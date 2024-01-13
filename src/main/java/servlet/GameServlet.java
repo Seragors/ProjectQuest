@@ -1,5 +1,7 @@
 package servlet;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import service.GameService;
 
 import javax.servlet.ServletException;
@@ -12,8 +14,8 @@ import java.io.IOException;
 
 @WebServlet("/game")
 public class GameServlet extends HttpServlet {
-    private int number = 1;
     private GameService gameService = new GameService();
+    private int number = 1;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String answer = gameService.call(request.getParameter("choice"));
